@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выпадающее Меню</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="dropdown-menu">
+        <ul class="dropdown-menu__list">
+            <li class="dropdown-menu__item">
+                <a href="#" class="dropdown-menu__link">Это мы(крокодиловые)</a>
+            </li>
+            <li class="dropdown-menu__item dropdown-menu__item--has-submenu">
+                <a href="#" class="dropdown-menu__link">Виды крокодиловых</a>
+                <ul class="dropdown-menu__submenu">
+                    <li class="dropdown-menu__item">
+                        <a href="#" class="dropdown-menu__link">Кайман</a>
+                    </li>
+                    <li class="dropdown-menu__item">
+                        <a href="#" class="dropdown-menu__link">Гавиал</a>
+                    </li>
+                    <li class="dropdown-menu__item dropdown-menu__item--has-submenu">
+                        <a href="#" class="dropdown-menu__link">Аллигатор</a>
+                        <ul class="dropdown-menu__submenu dropdown-menu__submenu--nested">
+                            <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Американский(миссисипский)</a></li>
+                            <li class="dropdown-menu__item"><a href="#" class="dropdown-menu__link">Китайский</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown-menu__item">
+                <a href="#" class="dropdown-menu__link">Кто мы</a>
+            </li>
+            <li class="dropdown-menu__item">
+                <a href="#" class="dropdown-menu__link">Наш ареал обитания</a>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

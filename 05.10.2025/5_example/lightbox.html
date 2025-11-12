@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лайтбокс Галерея</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="gallery">
+        <h2 class="gallery__title">Галерея изображений</h2>
+
+        <div class="gallery__item">
+            <input type="checkbox" id="lightbox1" class="gallery__checkbox">
+            <label for="lightbox1" class="gallery__thumbnail">
+                <img src="Crocodil.jpg" alt="Крокодил" class="gallery__thumbnail-image">
+            </label>
+            <div class="lightbox">
+                <div class="lightbox__content">
+                    <img src="Crocodil.jpg" alt="Крокодил" class="lightbox__image">
+                    <label for="lightbox1" class="lightbox__close">×</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery__item">
+            <input type="checkbox" id="lightbox2" class="gallery__checkbox">
+            <label for="lightbox2" class="gallery__thumbnail">
+                <img src="Alligator.jpg" alt="Аллигатор" class="gallery__thumbnail-image">
+            </label>
+            <div class="lightbox">
+                <div class="lightbox__content">
+                    <img src="Alligator.jpg" alt="Аллигатор" class="lightbox__image">
+                    <label for="lightbox2" class="lightbox__close">×</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery__item">
+            <input type="checkbox" id="lightbox3" class="gallery__checkbox">
+            <label for="lightbox3" class="gallery__thumbnail">
+                <img src="Cayman.jpg" alt="Кайман" class="gallery__thumbnail-image">
+            </label>
+            <div class="lightbox">
+                <div class="lightbox__content">
+                    <img src="Cayman.jpg" alt="Кайман" class="lightbox__image">
+                    <label for="lightbox3" class="lightbox__close">×</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery__item">
+            <input type="checkbox" id="lightbox4" class="gallery__checkbox">
+            <label for="lightbox4" class="gallery__thumbnail">
+                <img src="Gavial.jpg" alt="Миниатюра 4" class="gallery__thumbnail-image">
+            </label>
+            <div class="lightbox">
+                <div class="lightbox__content">
+                    <img src="Gavial.jpg" alt="Изображение 4" class="lightbox__image">
+                    <label for="lightbox4" class="lightbox__close">×</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

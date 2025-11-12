@@ -1,0 +1,122 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    padding: 20px;
+}
+
+
+.dropdown-menu {
+    background-color: #00511a;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(255, 43, 43, 0.1);
+}
+
+
+.dropdown-menu__list {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+}
+
+
+.dropdown-menu__item {
+    position: relative;
+    display: inline-block;
+}
+
+
+.dropdown-menu__link {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.dropdown-menu__link:hover {
+    background-color: #00511a;
+    
+}
+
+
+.dropdown-menu__submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    min-width: 200px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, visibility 0.3s, transform 0.3s;
+}
+
+
+.dropdown-menu__submenu--nested {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transform: translateX(-10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s, transform 0.3s;
+}
+
+
+.dropdown-menu__item:hover > .dropdown-menu__submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+
+.dropdown-menu__item:hover > .dropdown-menu__submenu--nested {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+
+.dropdown-menu__submenu .dropdown-menu__item {
+    width: 100%;
+}
+
+.dropdown-menu__submenu .dropdown-menu__link {
+    color: #333;
+    padding: 12px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu__submenu .dropdown-menu__link:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu__submenu--nested .dropdown-menu__link {
+    padding-left: 30px;
+    background-color: #f8f9fa;
+}
+
+
+.dropdown-menu__item--has-submenu > .dropdown-menu__link::after {
+    content: " ▾";
+    font-size: 0.8em;
+    margin-left: 4px;
+}
+
+.dropdown-menu__item--has-submenu:hover > .dropdown-menu__link::after {
+    content: " ▴";
+}
