@@ -1,0 +1,14 @@
+.page_text {
+	list-style: none;
+    width: 300px;
+}
+
+.page_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px; 
+
+}
+

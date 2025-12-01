@@ -1,0 +1,18 @@
+.page_element {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+    color: brown;
+    font-size: 24px;
+}
+
+.page_button {
+    height: 30px;
+    padding: 7px;
+    margin: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: aquamarine;
+}

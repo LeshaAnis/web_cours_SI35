@@ -1,0 +1,27 @@
+.page {
+    font-size: 24px;
+}
+.page-imformatiom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.page_button {
+    height: 30px;
+    padding: 7px;
+    margin: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: aquamarine;
+}
+
+.page_menu {
+    text-indent: 0px;
+}
+
+.page_menu-element {
+    list-style: none;
+    text-indent: 1.5em;
+}
