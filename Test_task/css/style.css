@@ -2,6 +2,231 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-image: url("../images/background.png");
+    font-family: 'PTSansRegular', sans-serif;
 }
 
+.page {
+    background-image: url("../images/background.png");
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    background-image: url("../images/background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.page__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 42px;
+    margin: 80px 0px 40px 0px;
+    color: #9f825d;
+    font-family: 'NotoSerifRegular', serif;
+    
+}
+
+.rooms {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    
+    
+}
+
+.room-card {
+    position: relative;
+    width: 100%;
+    max-width: 372px;
+    height: 591px;
+    margin: 0px 15px;
+    background-color:#ffffff;
+    border: 3px solid #ededed;
+    transition: opacity 0.2s ease;
+}
+
+.room-card__bestprice-icon {
+  position: absolute;
+  text-align: center;
+  z-index: 0;
+}
+
+.room-card__bestprice-text {
+  font-size: 12px;
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+}
+
+.room-inactive {
+    width: 372px;
+    height: 591px;
+    margin: 0px 15px;
+    background-color:#ffffff;
+    border: 3px solid #a9a9a9;
+    pointer-events: none;
+}
+
+.room-card__image {
+    margin-left: -2px;
+}
+
+.room-inactive__image {
+    margin-left: -2px;
+}
+
+.room-card__title {
+    color: #9f825d;
+    display: flex;
+    justify-content: center;
+    font-size: 28px;
+    margin: 30px 0px;
+}
+
+.room-inactive__title {
+    color: #a9a9a9;
+    display: flex;
+    justify-content: center;
+    font-size: 28px;
+    margin: 30px 0px;
+}
+
+.room-card__bestprice {
+  position: absolute;
+  top: 45px;
+  left: 45px;
+  z-index: 0;  
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.room-card:hover .room-card__bestprice {
+  display: flex;
+}
+
+.room-card__description {
+    width: 80%;
+    text-align: center;
+    margin: 25px auto;
+    font-size: 16px;
+}
+
+.room-inactive__description {
+    width: 80%;
+    text-align: center;
+    margin: 25px auto;
+    font-size: 16px;
+    color: #a9a9a9;
+}
+
+.room-card__divider {
+    width: 312px;
+    background-color: #9f825d;
+    height: 3px;
+    margin: auto;
+}
+
+.room-inactive__divider {
+    width: 312px;
+    background-color: #9f825d;
+    height: 3px;
+    margin: auto;
+}
+
+.room-card__price {
+    text-align: center;
+    margin: 30px auto;
+    font-size: 18px;
+}
+
+.room-inactive__price {
+    text-align: center;
+    margin: 30px auto;
+    font-size: 18px;
+    color: #a9a9a9;
+}
+
+.room-card__button {
+    width: 232px;
+    height: 52px;
+    background-color: #9f825d;
+    color: azure;
+    border: none;
+    margin: 0px 70px;
+    position: bottom;
+    font-size: 16px;  
+}
+
+.room-inactive__button {
+    width: 232px;
+    height: 52px;
+    background-color: #a9a9a9;
+    color: azure;
+    border: none;
+    margin: 0px 70px;
+    position: bottom;
+    font-size: 16px;  
+}
+
+.room-card--selected {
+  opacity: 0.65;
+}
+
+.room-card--selected .room-card__button {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.room-card--selected .room-card__bestprice {
+  display: none !important;
+}
+
+@media (min-width: 768px) {
+  .rooms {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+
+  }
+
+  .room-card,
+  .room-inactive {
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: 372px;
+  }
+
+  .rooms > *:nth-child(2) {
+    transform: translateY(-30px);
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .rooms {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .rooms > *:nth-child(2) {
+    transform: none;
+  }
+
+  .room-card,
+  .room-inactive {
+    flex: 0 1 auto;
+    max-width: 372px;
+  }
+}

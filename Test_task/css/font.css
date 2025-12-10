@@ -1,0 +1,17 @@
+/* Подключение шрифта Noto Serif Regular */
+@font-face {
+  font-family: 'NotoSerifRegular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('NotoSerifRegular.ttf') format('ttf'); /* или 'fonts/NotoSerifRegular.ttf' */
+  font-display: swap; /* чтобы текст не пропадал при загрузке */
+}
+
+/* Подключение шрифта PT Sans Regular */
+@font-face {
+  font-family: 'PTSansRegular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('PTSansRegular.ttf') format('ttf'); /* или 'fonts/PTSansRegular.ttf' */
+  font-display: swap;
+}

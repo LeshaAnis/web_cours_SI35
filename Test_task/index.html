@@ -5,34 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font.css">
 </head>
 <body class="page">
     <h1 class="page__title">НОМЕРА И ЦЕНЫ</h1>
     <div class="rooms">
-        <div class="room-card">
+        <div class="room-card" data-room="available">
             <img src="images/executive-suite.png" alt="Изображение номера" class="room-card__image">
+            <div class="room-card__bestprice">
+                <img src="images/best-price.png" alt="" class="room-card__bestprice-icon" />
+                <span class="room-card__bestprice-text">Лучшая цена</span>
+            </div>
             <h2 class="room-card__title">Представительский люкс</h2>
             <p class="room-card__description">Эксклюзивный номер с панорамным видом на центр города Москвы</p>
             <hr class="room-card__divider">
             <p class="room-card__price">от 7900 руб./сутки</p>
-            <button class="room-card__button button">Забронировать</button>
-
-            <div class="room-card">
+            <button type="button" class="room-card__button">Забронировать</button>
+        </div>
+        <div class="room-card" data-room="available">
             <img src="images/duplex.png" alt="Изображение номера" class="room-card__image">
+            <div class="room-card__bestprice">
+                <img src="images/best-price.png" alt="" class="room-card__bestprice-icon" />
+                <span class="room-card__bestprice-text">Лучшая цена</span>
+            </div>
             <h2 class="room-card__title">Дуплекс </h2>
             <p class="room-card__description">Просторный двухкомнатный номер с шикарным видос на парк</p>
             <hr class="room-card__divider">
             <p class="room-card__price">от 5700 руб./сутки</p>
-            <button class="room-card__button button">Забронировать</button>
-
-            <div class="room-card">
-            <img src="images/business-suite.png" alt="Изображение номера" class="room-card__image">
-            <h2 class="room-card__title">Бизнес-люкс</h2>
-            <p class="room-card__description">Трехкомнатный номер с панорамным видом на Москва-реку</p>
-            <hr class="room-card__divider">
-            <p class="room-card__price">от 4900 руб./сутки</p>
-            <button class="room-card__button button">Забронировать</button>
+            <button class="room-card__button">Забронировать</button>
+        </div>
+        <div class="room-inactive" data-room="unavailable">
+            <img src="images/business-suite.png" alt="Изображение номера" class="room-inactive__image">
+            <h2 class="room-inactive__title">Бизнес-люкс</h2>
+            <p class="room-inactive__description">Трехкомнатный номер с панорамным видом на Москва-реку</p>
+            <hr class="room-inactive__divider">
+            <p class="room-inactive__price">от 4900 руб./сутки</p>
+            <button class="room-inactive__button">Подробнее</button>
         </div>
     </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
